@@ -1,0 +1,21 @@
+<!-- required field -->
+<!--    - Empty string
+        - Spacebar -->
+
+<!-- Count
+    On/Off -->
+
+First name: <input (keyup)="inpurYourName($event)" />
+Last name: <input type="text" #lastname (keyup)="inputLastName(lastname.value)" (keyup.enter)="ok()"/>
+<br/>
+<button type="button" (click)="ok()" >Save</button>
+<br/>
+
+<p> Count {{ countInActive }} / {{ countAll }}</p>
+
+<ul>
+    <li *ngFor="let user of users; let i = index" (click)="toggle(i)">
+        <p *ngIf="!user.isActive"> <del>{{ user.name }}</del></p>
+        <p *ngIf="user.isActive"> {{ user.name }} </p>
+    </li>
+</ul>
