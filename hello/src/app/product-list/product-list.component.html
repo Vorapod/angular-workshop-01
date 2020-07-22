@@ -1,13 +1,12 @@
 <div class="col-12">
     List of Product Page
 </div>
+<div class="row"></div>
 <div class="col-2">
     Filter by:
 </div>
 <div class="col-10">
-    <select>
-        <option>Testtt</option>
-    </select>
+    <input type="text" [(ngModel)]="filterData" >
 </div>
 <div class="col-12">
     Filtered by ..
@@ -23,7 +22,7 @@
         <th> Rating</th>
     </tr>
     <tbody *ngIf="products.length > 0">
-        <tr *ngFor="let product of products">
+        <tr *ngFor="let product of products | product: filterData">
             <td>
                 xxx
             </td>

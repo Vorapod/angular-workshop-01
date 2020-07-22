@@ -8,7 +8,7 @@ import { Product } from '../models/product'
 export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
-
+  filterData: string;
   constructor() { }
 
   ngOnInit(): void {

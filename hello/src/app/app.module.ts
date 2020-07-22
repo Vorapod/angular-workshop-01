@@ -7,6 +7,8 @@ import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductNamePipe } from './product-name.pipe';
+import { FormsModule } from '@angular/forms';
+import { ProductPipe } from './product.pipe';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { ProductNamePipe } from './product-name.pipe';
     UsersComponent,
     LoginComponent,
     ProductListComponent,
-    ProductNamePipe
+    ProductNamePipe,
+    ProductPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
